@@ -1,0 +1,2 @@
+if object:
+    print("ass")

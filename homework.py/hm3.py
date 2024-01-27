@@ -12,4 +12,15 @@ raw_numbers = [
     "38050 111 22 11   ",
 ]
 
+def normalize_phone(phone_number):
+    phone_number=''.join(re.findall(r"[\d\+]",phone_number))           # Форматування номеру
+    
+    if not re.search(r"^\+", phone_number):                            # Перевірка на наявність префіксів
+        if re.search(r"^3", phone_number):
+            phone_number = "+" + phone_number
+        else:
+            phone_number = "+38" + phone_number
+    return phone_number
 
+for phone in raw_numbers:
+    print(normalize_phone(phone))
