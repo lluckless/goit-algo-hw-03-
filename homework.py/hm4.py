@@ -10,7 +10,7 @@ colleagues = [{"name": "John Gold", "birthday": "1980.07.12"},
               {"name": "Gig Gigon", "birthday": "1951.02.01"}
               ]
 
-def get_upcoming_birthdays(colleagues):
+def get_upcoming_birthdays(colleagues=None):
     today_date = dtdt.today().date()
     birthdays = []
     for ppl in colleagues:
